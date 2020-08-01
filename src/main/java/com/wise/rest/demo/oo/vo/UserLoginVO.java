@@ -1,4 +1,4 @@
-package com.wise.rest.demo.vo;
+package com.wise.rest.demo.oo.vo;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;

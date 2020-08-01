@@ -1,7 +1,7 @@
 package com.wise.rest.demo.exception;
 
 
-import com.wise.rest.demo.vo.Response;
+import com.wise.rest.demo.oo.vo.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.validation.BindException;

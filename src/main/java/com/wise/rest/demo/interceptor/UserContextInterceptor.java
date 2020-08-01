@@ -1,7 +1,7 @@
 package com.wise.rest.demo.interceptor;
 
 import com.wise.rest.demo.util.UserContextUtil;
-import com.wise.rest.demo.vo.UserLoginVO;
+import com.wise.rest.demo.oo.vo.UserLoginVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

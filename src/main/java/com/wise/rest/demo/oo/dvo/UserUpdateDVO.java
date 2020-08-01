@@ -1,17 +1,17 @@
-package com.wise.rest.demo.dvo;
+package com.wise.rest.demo.oo.dvo;
 
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.ScriptAssert;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
 /**
- * 用户创建参数校验类
+ * 用户更新参数校验类
  *
  * @author lingyuwang
  * @date 2020-08-01 10:09
@@ -23,19 +23,18 @@ import java.util.Date;
         lang = "javascript",
         script = "_this.termStartTime == null || _this.termEndTime == null || _this.termStartTime.getTime() < _this.termEndTime.getTime()",
         message = "有效开始时间必须小于结束时间")
-public class UserCreateDVO {
+public class UserUpdateDVO {
 
     /**
-     * 用户名
+     * 用户ID
      */
-    @NotBlank(message = "用户名不能为空")
-    @Size(max = 20, message = "用户名不能超过20个字符")
-    String userName;
+    @NotNull(message = "用户ID不能为空")
+    @Range
+    Long userId;
 
     /**
      * 密码
      */
-    @NotBlank(message = "密码不能为空")
     @Size(max = 20, message = "密码不能超过20个字符")
     String password;
 

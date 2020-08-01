@@ -1,13 +1,13 @@
 package com.wise.rest.demo.controller;
 
-import com.wise.rest.demo.dto.UserUpdateDTO;
-import com.wise.rest.demo.dvo.UserCreateDVO;
-import com.wise.rest.demo.dvo.UserUpdateDVO;
-import com.wise.rest.demo.entity.UserDO;
+import com.wise.rest.demo.oo.dto.UserUpdateDTO;
+import com.wise.rest.demo.oo.dvo.UserCreateDVO;
+import com.wise.rest.demo.oo.dvo.UserUpdateDVO;
+import com.wise.rest.demo.oo.entity.UserDO;
 import com.wise.rest.demo.service.UserService;
 import com.wise.rest.demo.util.UserContextUtil;
-import com.wise.rest.demo.vo.Response;
-import com.wise.rest.demo.vo.UserLoginVO;
+import com.wise.rest.demo.oo.vo.Response;
+import com.wise.rest.demo.oo.vo.UserLoginVO;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.validation.annotation.Validated;
@@ -31,7 +31,7 @@ public class UserController {
      * 创建用户
      *
      * @param userCreateDVO
-     * @return com.wise.rest.demo.vo.Response<java.lang.Long>
+     * @return com.wise.rest.demo.oo.vo.Response<java.lang.Long>
      * @author lingyuwang
      * @date 2020-08-01 11:12
      * @since 1.1.3.0
@@ -54,7 +54,7 @@ public class UserController {
      * 更新用户
      *
      * @param userUpdateDVO
-     * @return com.wise.rest.demo.vo.Response<java.lang.Integer>
+     * @return com.wise.rest.demo.oo.vo.Response<java.lang.Integer>
      * @author lingyuwang
      * @date 2020-08-01 11:45
      * @since 1.1.3.0

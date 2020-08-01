@@ -1,4 +1,4 @@
-package com.wise.rest.demo.bo;
+package com.wise.rest.demo.oo.bo;
 
 /**
  * 用户业务逻辑对象
