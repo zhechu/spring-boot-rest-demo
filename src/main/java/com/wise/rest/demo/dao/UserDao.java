@@ -84,4 +84,28 @@ public class UserDao {
         return userDO;
     }
 
+    /**
+     * 获取用户
+     *
+     * @param userName
+     * @return com.wise.rest.demo.obj.entity.UserDO
+     * @author lingyuwang
+     * @date 2020-08-01 14:48
+     * @since 1.1.3.0
+     */
+    public UserDO selectByUserName(String userName) {
+        // 模拟数据库返回
+        UserDO userDO = new UserDO();
+        userDO.setUserId(1L);
+        userDO.setUserName("zhangsan");
+        userDO.setPassword("123456");
+        userDO.setTermStartTime(new Date());
+        userDO.setTermEndTime(new Date());
+        userDO.setCreateTime(new Date());
+        userDO.setLastUpdateTime(new Date());
+        userDO.setOperateUserId(1L);
+
+        return userDO;
+    }
+
 }
