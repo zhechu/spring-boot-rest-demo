@@ -1,11 +1,14 @@
 package com.wise.rest.demo.controller;
 
+import com.wise.rest.demo.enums.YesNoEnum;
+import com.wise.rest.demo.obj.dto.UserDeleteDTO;
 import com.wise.rest.demo.obj.dto.UserUpdateDTO;
 import com.wise.rest.demo.obj.dvo.UserCreateDVO;
 import com.wise.rest.demo.obj.dvo.UserUpdateDVO;
 import com.wise.rest.demo.obj.entity.UserDO;
 import com.wise.rest.demo.obj.vo.Response;
 import com.wise.rest.demo.obj.vo.UserLoginVO;
+import com.wise.rest.demo.obj.vo.UserVO;
 import com.wise.rest.demo.service.UserService;
 import com.wise.rest.demo.util.UserContextUtil;
 import lombok.AllArgsConstructor;
@@ -70,6 +73,42 @@ public class UserController {
         userUpdateDTO.setOperateUserId(userLoginVO.getUserId());
 
         return Response.success(userService.update(userUpdateDTO));
+    }
+
+    /**
+     * 删除用户
+     *
+     * @param userId
+     * @return com.wise.rest.demo.obj.vo.Response<java.lang.Integer>
+     * @author lingyuwang
+     * @date 2020-08-01 14:32
+     * @since 1.1.3.0
+     */
+    @DeleteMapping("/{userId}")
+    public Response<Integer> delete(@PathVariable Long userId) {
+        UserDeleteDTO userDeleteDTO = new UserDeleteDTO();
+        userDeleteDTO.setUserId(userId);
+        userDeleteDTO.setDelFlag(YesNoEnum.YES.getKey());
+
+        // 获取操作用户
+        UserLoginVO userLoginVO = UserContextUtil.getUserLoginVO();
+        userDeleteDTO.setOperateUserId(userLoginVO.getUserId());
+
+        return Response.success(userService.delete(userDeleteDTO));
+    }
+
+    /**
+     * 获取用户
+     *
+     * @param userId
+     * @return com.wise.rest.demo.obj.vo.Response<com.wise.rest.demo.obj.vo.UserVO>
+     * @author lingyuwang
+     * @date 2020-08-01 14:51
+     * @since 1.1.3.0
+     */
+    @GetMapping("/{userId}")
+    public Response<UserVO> findUserByUserId(@PathVariable Long userId) {
+        return Response.success(userService.findByUserId(userId));
     }
 
 }

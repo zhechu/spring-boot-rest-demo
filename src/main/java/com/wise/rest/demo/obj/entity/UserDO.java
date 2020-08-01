@@ -1,5 +1,7 @@
 package com.wise.rest.demo.obj.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
@@ -20,6 +22,7 @@ public class UserDO {
     /**
      * 用户ID
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     Long userId;
 
     /**
@@ -56,5 +59,10 @@ public class UserDO {
      * 最后更新时间
      */
     Date lastUpdateTime;
+
+    /**
+     * 删除标识(0：未删除 1：已删除)
+     */
+    Integer delFlag;
 
 }
