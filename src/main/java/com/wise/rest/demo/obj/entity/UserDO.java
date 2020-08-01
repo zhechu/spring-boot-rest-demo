@@ -1,4 +1,4 @@
-package com.wise.rest.demo.oo.dto;
+package com.wise.rest.demo.obj.entity;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -7,20 +7,25 @@ import lombok.experimental.FieldDefaults;
 import java.util.Date;
 
 /**
- * 用户更新传输类
+ * 用户实体（对应数据库表）
  *
  * @author lingyuwang
- * @date 2020-08-01 10:09
+ * @date 2020-08-01 10:02
  * @since 1.1.3.0
  */
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserUpdateDTO {
+public class UserDO {
 
     /**
      * 用户ID
      */
     Long userId;
+
+    /**
+     * 用户名
+     */
+    String userName;
 
     /**
      * 密码
@@ -41,6 +46,11 @@ public class UserUpdateDTO {
      * 操作用户ID
      */
     Long operateUserId;
+
+    /**
+     * 创建时间
+     */
+    Date createTime;
 
     /**
      * 最后更新时间

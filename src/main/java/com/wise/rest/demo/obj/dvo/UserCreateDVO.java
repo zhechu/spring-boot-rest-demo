@@ -1,4 +1,4 @@
-package com.wise.rest.demo.oo.dvo;
+package com.wise.rest.demo.obj.dvo;
 
 import lombok.AccessLevel;
 import lombok.Data;

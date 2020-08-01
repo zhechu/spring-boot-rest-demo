@@ -1,4 +1,4 @@
-package com.wise.rest.demo.oo.vo;
+package com.wise.rest.demo.obj.vo;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

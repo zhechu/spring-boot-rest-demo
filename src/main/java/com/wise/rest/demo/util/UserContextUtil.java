@@ -1,6 +1,6 @@
 package com.wise.rest.demo.util;
 
-import com.wise.rest.demo.oo.vo.UserLoginVO;
+import com.wise.rest.demo.obj.vo.UserLoginVO;
 
 /**
  * 用户上下文信息

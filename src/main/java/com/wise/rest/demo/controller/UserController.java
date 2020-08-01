@@ -1,13 +1,13 @@
 package com.wise.rest.demo.controller;
 
-import com.wise.rest.demo.oo.dto.UserUpdateDTO;
-import com.wise.rest.demo.oo.dvo.UserCreateDVO;
-import com.wise.rest.demo.oo.dvo.UserUpdateDVO;
-import com.wise.rest.demo.oo.entity.UserDO;
+import com.wise.rest.demo.obj.dto.UserUpdateDTO;
+import com.wise.rest.demo.obj.dvo.UserCreateDVO;
+import com.wise.rest.demo.obj.dvo.UserUpdateDVO;
+import com.wise.rest.demo.obj.entity.UserDO;
+import com.wise.rest.demo.obj.vo.Response;
+import com.wise.rest.demo.obj.vo.UserLoginVO;
 import com.wise.rest.demo.service.UserService;
 import com.wise.rest.demo.util.UserContextUtil;
-import com.wise.rest.demo.oo.vo.Response;
-import com.wise.rest.demo.oo.vo.UserLoginVO;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.validation.annotation.Validated;

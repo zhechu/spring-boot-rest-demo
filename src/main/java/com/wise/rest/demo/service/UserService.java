@@ -1,7 +1,7 @@
 package com.wise.rest.demo.service;
 
-import com.wise.rest.demo.oo.dto.UserUpdateDTO;
-import com.wise.rest.demo.oo.entity.UserDO;
+import com.wise.rest.demo.obj.dto.UserUpdateDTO;
+import com.wise.rest.demo.obj.entity.UserDO;
 
 public interface UserService {
 

@@ -2,8 +2,8 @@ package com.wise.rest.demo.service.impl;
 
 
 import com.wise.rest.demo.dao.UserDao;
-import com.wise.rest.demo.oo.dto.UserUpdateDTO;
-import com.wise.rest.demo.oo.entity.UserDO;
+import com.wise.rest.demo.obj.dto.UserUpdateDTO;
+import com.wise.rest.demo.obj.entity.UserDO;
 import com.wise.rest.demo.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
